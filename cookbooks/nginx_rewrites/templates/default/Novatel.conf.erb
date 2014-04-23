@@ -1,0 +1,7 @@
+## Put your custom nginx conf here!
+
+location / {
+if (!-e $request_filename){
+rewrite ^(.*)$ /index.php break;
+}
+}
